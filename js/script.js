@@ -26,12 +26,12 @@ for (var prop in person) {
 };
 
 //create a new image element
-var elem = document.createElement('img');
-elem.src = 'img/cat.jpg';
-elem.alt = 'picture of an awesome and adorable cat';
+var kitty = document.createElement('img');
+kitty.src = 'img/cat.jpg';
+kitty.alt = 'picture of an awesome and adorable cat';
 
 //add this element to the top of the body
-document.body.insertBefore(elem, document.body.firstChild);
+document.body.insertBefore(kitty, document.body.firstChild);
 
 //create new element again
 var dog = document.createElement('img');
@@ -40,3 +40,20 @@ dog.alt = 'picture of a cute puppy';
 
 //add this to the body of the page
 document.body.appendChild(dog);
+
+function onPuppyClick {
+	//alert('you clicked my puppy!');
+	document.getElementById('bark').play;
+}
+
+var elem = document.getElementById('puppy-pic');
+
+if (elem.addEventListener) {
+	elem.addEventListener('click', onPuppyClick);
+else if (elem.attachEvent) {
+	elem.attachEvent('click', onPuppyClick);
+}
+
+document.addEventListener('DOMContentLoaded', function() {
+	//
+});
